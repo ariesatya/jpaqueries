@@ -1,0 +1,20 @@
+# Framework cache
+.cache
+.project
+.DS_Store
+.settings
+.classpath
+.factorypath
+.iml
+
+# Editor garbage
+.idea/
+.vscode/
+.settings/
+.classpath
+.vscode/
+*.iml
+# Compiled Code
+target/
+**/*.class
+/.run/

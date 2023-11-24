@@ -1,0 +1,66 @@
+2023-11-24T07:47:09.544+07:00  INFO 92879 --- [main] c.q.j.a.d.repo.EmployeeRepositoryTest    : Starting EmployeeRepositoryTest using Java 17.0.6 with PID 92879 (started by ariesatya in /Users/ariesatya/code/demoQuery)
+2023-11-24T07:47:09.547+07:00  INFO 92879 --- [main] c.q.j.a.d.repo.EmployeeRepositoryTest    : The following 1 profile is active: "default"
+2023-11-24T07:47:09.691+07:00  INFO 92879 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T07:47:09.711+07:00  INFO 92879 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
+2023-11-24T07:47:09.731+07:00  INFO 92879 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-11-24T07:47:09.788+07:00  INFO 92879 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:b7ec0fd3-4e2d-4a80-9698-f9d32e2e07cd;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-11-24T07:47:09.906+07:00  INFO 92879 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T07:47:09.931+07:00  INFO 92879 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-24T07:47:09.933+07:00  INFO 92879 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-24T07:47:10.038+07:00  INFO 92879 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T07:47:10.429+07:00  INFO 92879 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T07:47:10.450+07:00  INFO 92879 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T07:47:10.595+07:00  INFO 92879 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-11-24T07:47:10.781+07:00  INFO 92879 --- [main] c.q.j.a.d.repo.EmployeeRepositoryTest    : Started EmployeeRepositoryTest in 1.41 seconds (process running for 1.879)
+2023-11-24T07:47:11.170+07:00  WARN 92879 --- [main] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+2023-11-24T07:47:11.184+07:00  WARN 92879 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90015, SQLState: 90015
+2023-11-24T07:47:11.184+07:00 ERROR 92879 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SUM or AVG on wrong data type for "SUM(M.MEETING_NAME)"; SQL statement:
+SELECT
+    max(e.name) as employeeName,
+    SUm(m.meeting_name) as meetingName
+FROM Employee e
+JOIN EMPLOYEE_MEETING em ON e.id = em.employee_id
+JOIN Meeting m ON em.meeting_id = m.id
+WHERE LOWER(m.meeting_name) = LOWER(?) [90015-214]
+2023-11-24T07:47:11.214+07:00  INFO 92879 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T07:47:58.790+07:00  INFO 92913 --- [main] c.q.j.a.d.repo.EmployeeRepositoryTest    : Starting EmployeeRepositoryTest using Java 17.0.6 with PID 92913 (started by ariesatya in /Users/ariesatya/code/demoQuery)
+2023-11-24T07:47:58.791+07:00  INFO 92913 --- [main] c.q.j.a.d.repo.EmployeeRepositoryTest    : The following 1 profile is active: "default"
+2023-11-24T07:47:58.918+07:00  INFO 92913 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T07:47:58.941+07:00  INFO 92913 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interfaces.
+2023-11-24T07:47:58.960+07:00  INFO 92913 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-11-24T07:47:59.015+07:00  INFO 92913 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:2ad27f86-d9c7-4031-bedf-e6e403162e54;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-11-24T07:47:59.124+07:00  INFO 92913 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T07:47:59.154+07:00  INFO 92913 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-24T07:47:59.155+07:00  INFO 92913 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-24T07:47:59.261+07:00  INFO 92913 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T07:47:59.650+07:00  INFO 92913 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T07:47:59.669+07:00  INFO 92913 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T07:47:59.809+07:00  INFO 92913 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-11-24T07:47:59.997+07:00  INFO 92913 --- [main] c.q.j.a.d.repo.EmployeeRepositoryTest    : Started EmployeeRepositoryTest in 1.353 seconds (process running for 1.767)
+2023-11-24T07:48:00.373+07:00  WARN 92913 --- [main] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+2023-11-24T07:48:00.382+07:00  WARN 92913 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90015, SQLState: 90015
+2023-11-24T07:48:00.382+07:00 ERROR 92913 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SUM or AVG on wrong data type for "SUM(M.MEETING_NAME)"; SQL statement:
+SELECT
+    max(e.name) as employeeName,
+    SUm(m.meeting_name) as meetingName
+FROM Employee e
+JOIN EMPLOYEE_MEETING em ON e.id = em.employee_id
+JOIN Meeting m ON em.meeting_id = m.id
+WHERE LOWER(m.meeting_name) = LOWER(?) [90015-214]
+2023-11-24T07:48:00.416+07:00  INFO 92913 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T07:48:20.067+07:00  INFO 92940 --- [main] c.q.j.a.d.repo.EmployeeRepositoryTest    : Starting EmployeeRepositoryTest using Java 17.0.6 with PID 92940 (started by ariesatya in /Users/ariesatya/code/demoQuery)
+2023-11-24T07:48:20.068+07:00  INFO 92940 --- [main] c.q.j.a.d.repo.EmployeeRepositoryTest    : The following 1 profile is active: "default"
+2023-11-24T07:48:20.197+07:00  INFO 92940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T07:48:20.220+07:00  INFO 92940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interfaces.
+2023-11-24T07:48:20.240+07:00  INFO 92940 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-11-24T07:48:20.296+07:00  INFO 92940 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:9589655d-7834-444a-9332-03de2b111c1b;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-11-24T07:48:20.403+07:00  INFO 92940 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T07:48:20.423+07:00  INFO 92940 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-24T07:48:20.424+07:00  INFO 92940 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-24T07:48:20.513+07:00  INFO 92940 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T07:48:20.884+07:00  INFO 92940 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T07:48:20.903+07:00  INFO 92940 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T07:48:21.039+07:00  INFO 92940 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-11-24T07:48:21.233+07:00  INFO 92940 --- [main] c.q.j.a.d.repo.EmployeeRepositoryTest    : Started EmployeeRepositoryTest in 1.337 seconds (process running for 1.759)
+2023-11-24T07:48:21.605+07:00  WARN 92940 --- [main] org.hibernate.orm.query                  : HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+2023-11-24T07:48:21.635+07:00  INFO 92940 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
